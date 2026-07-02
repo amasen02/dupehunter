@@ -1,0 +1,55 @@
+name: Bug report
+description: Report a defect so it can be reproduced and fixed.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for filing a bug. Please search existing issues first to avoid duplicates.
+        Do not paste credentials, private paths, or file contents you don't want public.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: A clear description of the bug and what you expected instead.
+      placeholder: When I ran ..., I expected ..., but instead ...
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Command
+      description: The exact `dupehunter` command you ran (redact any real paths you'd rather not share).
+      render: shell
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      options:
+        - Scanning / duplicate detection
+        - Hardlink collapsing (already-linked files)
+        - --delete
+        - --hardlink
+        - --json output
+        - CLI / options
+        - Other / not sure
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: OS + `node --version` + dupehunter version (`dupehunter --version`).
+      placeholder: Windows 11, Node 22.10.0, dupehunter 1.0.0
+    validations:
+      required: false
+  - type: textarea
+    id: output
+    attributes:
+      label: Output / error
+      description: Paste the relevant dupehunter output.
+      render: shell
+    validations:
+      required: false

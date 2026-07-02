@@ -1,0 +1,50 @@
+{
+  "name": "dupehunter",
+  "version": "1.0.0",
+  "description": "A fast, hardlink-aware duplicate file finder and reclaimer CLI with zero runtime dependencies",
+  "keywords": [
+    "duplicate",
+    "duplicates",
+    "cli",
+    "disk-space",
+    "file-management",
+    "hardlink",
+    "dedupe"
+  ],
+  "homepage": "https://github.com/amasen02/dupehunter#readme",
+  "bugs": "https://github.com/amasen02/dupehunter/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amasen02/dupehunter.git"
+  },
+  "license": "MIT",
+  "author": "Ama Senevirathne <amasen02@gmail.com>",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "dupehunter": "./dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "node -e \"require('fs').rmSync('dist', { recursive: true, force: true })\"",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.test.json",
+    "test": "node --import tsx --test \"test/*.test.ts\"",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.19.0",
+    "@types/node": "^22.10.7",
+    "eslint": "^9.19.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.21.0"
+  }
+}
