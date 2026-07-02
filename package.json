@@ -36,13 +36,14 @@
     "clean": "node -e \"require('fs').rmSync('dist', { recursive: true, force: true })\"",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.test.json",
-    "test": "node --import tsx --test \"test/*.test.ts\"",
+    "test": "node scripts/run-tests.mjs",
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",
     "@types/node": "^22.10.7",
     "eslint": "^9.19.0",
+    "globals": "^17.7.0",
     "tsx": "^4.19.2",
     "typescript": "^5.7.3",
     "typescript-eslint": "^8.21.0"
