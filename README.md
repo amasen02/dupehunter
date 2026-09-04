@@ -1,5 +1,10 @@
 # dupehunter — hardlink-aware duplicate file finder & reclaimer
 
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/amasen02/dupehunter/badge)](https://securityscorecards.dev/viewer/?uri=github.com/amasen02/dupehunter)
+[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/10332/badge)](https://www.bestpractices.dev/en)
+[![Security Policy](https://img.shields.io/badge/Security-Policy-blue.svg)](.github/SECURITY.md)
+
+
 [![CI](https://github.com/amasen02/dupehunter/actions/workflows/ci.yml/badge.svg)](https://github.com/amasen02/dupehunter/actions/workflows/ci.yml)
 [![CodeQL](https://github.com/amasen02/dupehunter/actions/workflows/codeql.yml/badge.svg)](https://github.com/amasen02/dupehunter/actions/workflows/codeql.yml)
 [![Node.js](https://img.shields.io/badge/Node.js-%E2%89%A520-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
@@ -157,3 +162,33 @@ including for commercial purposes, provided the copyright notice is retained.
 ## Author
 
 **Ama Senevirathne** — [GitHub](https://github.com/amasen02)
+
+---
+
+## 🌟 Fork, Build Upon & Extend This Project
+
+We deliberately built this repository to be **100% open, modular, and easy to fork and extend**:
+
+- 🔓 **Permissive MIT License**: Zero CLA, commercial use permitted, you keep full ownership of your contributions.
+- 🛡️ **Hardened Supply Chain**: Built with automated CI testing, OpenSSF Scorecard supply-chain security, and strict quality checks.
+- ⚡ **High-Performance Foundation**: Zero unnecessary bloat &mdash; clean architectural boundaries that make hacking on this code a joy.
+
+### 💡 High-Impact Ideas Ready for You to Build:
+- **Implement btrfs / ZFS extent-level clone (reflink) deduplication support**
+- **Add visual terminal directory treemap using ASCII block visualization**
+- **Integrate memory-mapped file hashing for zero-copy file comparisons**
+- **Add export to SQLite database for million-file deduplication cataloging**
+
+### 🚀 60-Second Quickstart
+```bash
+git clone https://github.com/amasen02/dupehunter.git
+cd dupehunter
+npm install
+npm test
+```
+
+### 🤝 Frictionless Contributions
+1. **Fork** the repo & clone it locally.
+2. Create your feature branch (`git checkout -b feat/my-awesome-idea`).
+3. Verify tests pass cleanly.
+4. Open a PR &mdash; we review and merge PRs within 24–48 hours!
